@@ -2,7 +2,7 @@ export default eventHandler((evt) => {
   const host = evt.node.req.headers.host
   switch (host) {
     case 'channel.sxzz.moe':
-      sendRedirect(evt, 'https://t.me/+6221NdOWC5hiYzU1')
+      sendRedirect(evt, 'https://t.me/sxzz_channel')
       return
     case 'chat.sxzz.moe':
       sendRedirect(evt, 'https://discord.com/invite/2bHNPmTsy4')
