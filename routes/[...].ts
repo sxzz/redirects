@@ -11,6 +11,7 @@ export default eventHandler((evt) => {
       sendRedirect(evt, 'https://t.me/sxzz_group')
       return
     case 'sxzz.moe':
+    case 'www.sxzz.moe':
       sendRedirect(evt, 'https://blog.sxzz.moe')
       return
   }
