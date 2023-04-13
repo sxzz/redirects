@@ -12,7 +12,8 @@ export default eventHandler((evt) => {
       return
     case 'sxzz.moe':
     case 'www.sxzz.moe':
-      sendRedirect(evt, 'https://blog.sxzz.moe')
+    case 'blog.sxzz.moe':
+      sendRedirect(evt, 'https://xlog.sxzz.moe')
       return
   }
   return host
