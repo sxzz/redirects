@@ -6,7 +6,7 @@
     "build": "nitropack build",
     "preview": "node .output/server/index.mjs",
     "prepare": "nitropack prepare",
-    "pub": "NITRO_PRESET=cloudflare bun run build && wrangler publish"
+    "deploy": "NITRO_PRESET=cloudflare bun run build && wrangler deploy"
   },
   "devDependencies": {
     "@sxzz/eslint-config": "^3.3.2",
