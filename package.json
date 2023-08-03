@@ -1,5 +1,6 @@
 {
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "nitropack dev",
     "build": "nitropack build",
@@ -7,13 +8,13 @@
     "prepare": "nitropack prepare",
     "pub": "NITRO_PRESET=cloudflare bun run build && wrangler publish"
   },
-  "dependencies": {},
   "devDependencies": {
-    "@sxzz/eslint-config-prettier": "^2.4.5",
-    "@sxzz/eslint-config-ts": "^2.4.5",
-    "eslint": "^8.35.0",
-    "nitropack": "^2.2.3",
-    "typescript": "5.0.1-rc",
-    "wrangler": "^2.12.0"
-  }
+    "@sxzz/eslint-config": "^3.3.2",
+    "@sxzz/prettier-config": "^1.0.4",
+    "eslint": "^8.46.0",
+    "nitropack": "^2.5.2",
+    "typescript": "5.1.6",
+    "wrangler": "^3.4.0"
+  },
+  "prettier": "@sxzz/prettier-config"
 }
