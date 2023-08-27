@@ -8,7 +8,8 @@ export default eventHandler((evt) => {
       sendRedirect(evt, 'https://discord.gg/r3knZmVCxf')
       return
     case 'tg-group.sxzz.moe':
-      send(evt, '暂不对外开放，请联系我', 'text/plain; charset=utf-8')
+      // send(evt, '暂不对外开放，请联系我', 'text/plain; charset=utf-8')
+      sendRedirect(evt, 'https://t.me/+SfNJUvZ8YBszMGVl')
       return
     case 'sxzz.moe':
     case 'www.sxzz.moe':
