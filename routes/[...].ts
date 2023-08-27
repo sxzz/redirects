@@ -5,7 +5,7 @@ export default eventHandler((evt) => {
       sendRedirect(evt, 'https://t.me/sxzz_channel')
       return
     case 'chat.sxzz.moe':
-      sendRedirect(evt, 'https://discord.com/invite/2bHNPmTsy4')
+      sendRedirect(evt, 'https://discord.gg/r3knZmVCxf')
       return
     case 'tg-group.sxzz.moe':
       send(evt, '暂不对外开放，请联系我', 'text/plain; charset=utf-8')
