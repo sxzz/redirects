@@ -2,15 +2,14 @@ export default eventHandler((evt) => {
   const host = evt.node.req.headers.host
   switch (host) {
     case 'channel.sxzz.moe':
-      sendRedirect(evt, 'https://t.me/sxzz_channel')
-      return
+      // sendRedirect(evt, 'https://t.me/sxzz_channel')
+      return 'No longer public.'
     case 'chat.sxzz.moe':
       sendRedirect(evt, 'https://discord.gg/r3knZmVCxf')
       return
     case 'tg-group.sxzz.moe':
-      // send(evt, '暂不对外开放，请联系我', 'text/plain; charset=utf-8')
-      sendRedirect(evt, 'https://t.me/+SfNJUvZ8YBszMGVl')
-      return
+      // sendRedirect(evt, 'https://t.me/+SfNJUvZ8YBszMGVl')
+      return 'No longer public.'
     case 'sxzz.moe':
     case 'www.sxzz.moe':
     case 'blog.sxzz.moe':
