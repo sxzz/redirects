@@ -16,7 +16,7 @@ export default eventHandler((evt) => {
       sendRedirect(evt, 'https://xlog.sxzz.moe')
       return
     case 'ama.sxzz.moe':
-      sendRedirect(evt, 'https://cal.com/sanxiaozhizi/meeting')
+      sendRedirect(evt, 'https://xlog.sxzz.moe/chat')
       return
   }
   return host
