@@ -11,7 +11,9 @@ export default eventHandler((evt) => {
       // sendRedirect(evt, 'https://t.me/+SfNJUvZ8YBszMGVl')
       return 'No longer public.'
     case 'sxzz.moe':
+    case 'sxzz.dev':
     case 'www.sxzz.moe':
+    case 'www.sxzz.dev':
     case 'blog.sxzz.moe':
       sendRedirect(evt, 'https://xlog.sxzz.moe')
       return
