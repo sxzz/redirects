@@ -14,6 +14,7 @@
     "@sxzz/prettier-config": "^2.2.3",
     "eslint": "^9.29.0",
     "nitropack": "^2.11.13",
+    "prettier": "^3.6.1",
     "typescript": "5.8.3",
     "wrangler": "^4.22.0"
   },
