@@ -7,7 +7,6 @@
     "build": "nitropack build",
     "preview": "node .output/server/index.mjs",
     "prepare": "nitropack prepare",
-    "deploy": "NITRO_PRESET=cloudflare pnpm run build && wrangler deploy",
     "lint": "eslint --cache"
   },
   "devDependencies": {
@@ -16,8 +15,7 @@
     "eslint": "^9.29.0",
     "nitropack": "^2.11.13",
     "prettier": "^3.6.1",
-    "typescript": "5.8.3",
-    "wrangler": "^4.22.0"
+    "typescript": "5.8.3"
   },
   "prettier": "@sxzz/prettier-config"
 }

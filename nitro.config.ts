@@ -6,5 +6,13 @@ export default defineNitroConfig({
       },
     },
   },
-  compatibilityDate: '2025-06-27',
+  preset: 'cloudflare_module',
+  cloudflare: {
+    deployConfig: true,
+    nodeCompat: false,
+    wrangler: {
+      name: 'redirects',
+    },
+  },
+  compatibilityDate: '2025-06-26',
 })
