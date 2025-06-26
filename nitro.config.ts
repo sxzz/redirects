@@ -2,10 +2,9 @@ export default defineNitroConfig({
   typescript: {
     tsConfig: {
       compilerOptions: {
-        noEmit: true,
         allowJs: false,
       },
     },
   },
-  compatibilityDate: '2024-11-10',
+  compatibilityDate: '2025-06-27',
 })

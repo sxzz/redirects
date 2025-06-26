@@ -7,7 +7,8 @@
     "build": "nitropack build",
     "preview": "node .output/server/index.mjs",
     "prepare": "nitropack prepare",
-    "deploy": "NITRO_PRESET=cloudflare pnpm run build && wrangler deploy"
+    "deploy": "NITRO_PRESET=cloudflare pnpm run build && wrangler deploy",
+    "lint": "eslint --cache"
   },
   "devDependencies": {
     "@sxzz/eslint-config": "^7.0.4",
