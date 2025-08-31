@@ -6,15 +6,19 @@ export default eventHandler((evt) => {
       // sendRedirect(evt, 'https://t.me/sxzz_channel')
       // sendRedirect(evt, 'https://t.me/+SfNJUvZ8YBszMGVl')
       return 'No longer public.'
+
     case 'chat.sxzz.moe':
       return sendRedirect(evt, 'https://discord.gg/r3knZmVCxf')
 
-    case 'sxzz.moe':
     case 'sxzz.dev':
-    case 'www.sxzz.moe':
     case 'www.sxzz.dev':
+      return sendRedirect(evt, 'https://xlog.sxzz.moe')
+
+    case 'sxzz.moe':
+    case 'www.sxzz.moe':
     case 'blog.sxzz.moe':
       return sendRedirect(evt, 'https://xlog.sxzz.moe')
+
     case 'ama.sxzz.moe':
       return sendRedirect(evt, 'https://xlog.sxzz.moe/chat')
   }

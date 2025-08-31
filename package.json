@@ -1,6 +1,6 @@
 {
   "private": true,
-  "packageManager": "pnpm@10.12.4",
+  "packageManager": "pnpm@10.15.0",
   "type": "module",
   "scripts": {
     "dev": "nitropack dev",
@@ -11,11 +11,11 @@
   },
   "devDependencies": {
     "@sxzz/eslint-config": "^7.0.4",
-    "@sxzz/prettier-config": "^2.2.3",
-    "eslint": "^9.29.0",
+    "@sxzz/prettier-config": "^2.2.4",
+    "eslint": "^9.34.0",
     "nitropack": "^2.11.13",
-    "prettier": "^3.6.1",
-    "typescript": "5.8.3"
+    "prettier": "^3.6.2",
+    "typescript": "5.9.2"
   },
   "prettier": "@sxzz/prettier-config"
 }
