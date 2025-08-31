@@ -12,7 +12,7 @@ export default eventHandler((evt) => {
 
     case 'sxzz.dev':
     case 'www.sxzz.dev':
-      return sendRedirect(evt, 'https://xlog.sxzz.moe')
+      return sendRedirect(evt, 'https://bsky.app/profile/sxzz.dev')
 
     case 'sxzz.moe':
     case 'www.sxzz.moe':
