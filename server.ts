@@ -23,9 +23,7 @@ export default eventHandler((evt) => {
 
     case 'sxzz.moe':
     case 'www.sxzz.moe':
-    case 'sxzz.dev':
-    case 'www.sxzz.dev':
-      return redirect('https://bsky.app/profile/sxzz.dev')
+      return redirect('https://sxzz.dev')
 
     case 'blog.sxzz.moe':
       return 'The website is down now.'
