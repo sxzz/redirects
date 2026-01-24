@@ -17,10 +17,12 @@ export default eventHandler((evt) => {
     case 'sxzz.moe':
     case 'www.sxzz.moe':
     case 'blog.sxzz.moe':
-      return sendRedirect(evt, 'https://xlog.sxzz.moe')
+      // sendRedirect(evt, 'https://xlog.sxzz.moe')
+      return 'The website is down now.'
 
     case 'ama.sxzz.moe':
-      return sendRedirect(evt, 'https://xlog.sxzz.moe/chat')
+      // sendRedirect(evt, 'https://xlog.sxzz.moe/chat')
+      return 'The website is down now.'
   }
   return host
 })
