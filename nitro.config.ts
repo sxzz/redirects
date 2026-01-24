@@ -1,11 +1,6 @@
-export default defineNitroConfig({
-  typescript: {
-    tsConfig: {
-      compilerOptions: {
-        allowJs: false,
-      },
-    },
-  },
+import { defineConfig } from 'nitro'
+
+export default defineConfig({
   preset: 'cloudflare_module',
   cloudflare: {
     deployConfig: true,

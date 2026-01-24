@@ -1,4 +1,6 @@
-const blogArticlesMapping = {
+import { eventHandler, redirect } from 'nitro/h3'
+
+const blogArticlesMapping: Record<string, string> = {
   '2022': 'https://gist.github.com/sxzz/920d4480c8b507f6fb6606421cbf7028',
   'vue-3-3': 'https://gist.github.com/sxzz/3995fc7251567c7c95de35f45539b9c2',
   'hackergame-2024-writeup':
@@ -7,34 +9,34 @@ const blogArticlesMapping = {
     'https://gist.github.com/sxzz/a7c0d454b012bdca94e386a9520490be',
 }
 
+// eslint-disable-next-line import/no-default-export
 export default eventHandler((evt) => {
-  const host = evt.node.req.headers.host
+  const { host, pathname } = evt.url
 
   switch (host) {
     case 'channel.sxzz.moe':
     case 'tg-group.sxzz.moe':
-      // sendRedirect(evt, 'https://t.me/sxzz_channel')
-      // sendRedirect(evt, 'https://t.me/+SfNJUvZ8YBszMGVl')
+      // redirect('https://t.me/sxzz_channel')
+      // redirect('https://t.me/+SfNJUvZ8YBszMGVl')
       return 'No longer public.'
 
     case 'chat.sxzz.moe':
-      return sendRedirect(evt, 'https://discord.gg/r3knZmVCxf')
+      return redirect('https://discord.gg/r3knZmVCxf')
 
     case 'sxzz.dev':
     case 'www.sxzz.dev':
-      return sendRedirect(evt, 'https://bsky.app/profile/sxzz.dev')
+      return redirect('https://bsky.app/profile/sxzz.dev')
 
     case 'sxzz.moe':
     case 'www.sxzz.moe':
     case 'blog.sxzz.moe':
-      // sendRedirect(evt, 'https://xlog.sxzz.moe')
+      // redirect('https://xlog.sxzz.moe')
       return 'The website is down now.'
 
     case 'xlog.sxzz.moe': {
-      const path = evt.path.slice(1)
-      const redirectUrl = blogArticlesMapping[path]
+      const redirectUrl = blogArticlesMapping[pathname.slice(1)]
       if (redirectUrl) {
-        return sendRedirect(evt, redirectUrl)
+        return redirect(redirectUrl)
       }
       return 'The website is down now.'
     }
@@ -43,5 +45,6 @@ export default eventHandler((evt) => {
       // sendRedirect(evt, 'https://xlog.sxzz.moe/chat')
       return 'Closed.'
   }
-  return host
+
+  return { host, pathname }
 })
