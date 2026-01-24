@@ -22,6 +22,7 @@ export default eventHandler((evt) => {
       return redirect('https://discord.gg/r3knZmVCxf')
 
     case 'sxzz.moe':
+    case 'www.sxzz.dev':
     case 'www.sxzz.moe':
       return redirect('https://sxzz.dev')
 
