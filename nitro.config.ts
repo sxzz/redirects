@@ -7,6 +7,9 @@ export default defineConfig({
     nodeCompat: false,
     wrangler: {
       name: 'redirects',
+      observability: {
+        enabled: true,
+      },
     },
   },
   compatibilityDate: 'latest',

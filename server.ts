@@ -1,4 +1,4 @@
-import { eventHandler, redirect } from 'nitro/h3'
+import { eventHandler, html, redirect } from 'nitro/h3'
 
 const blogArticlesMapping: Record<string, string> = {
   '2022': 'https://gist.github.com/sxzz/920d4480c8b507f6fb6606421cbf7028',
@@ -27,14 +27,48 @@ export default eventHandler((evt) => {
       return redirect('https://sxzz.dev')
 
     case 'blog.sxzz.moe':
-      return 'The website is down now.'
-
     case 'xlog.sxzz.moe': {
       const redirectUrl = blogArticlesMapping[pathname.slice(1)]
       if (redirectUrl) {
         return redirect(redirectUrl)
       }
-      return 'The website is down now.'
+      return html`
+        <body
+          style="font-family: monospace; line-height: 1.6; font-size: 16px;"
+        >
+          <h1>Articles</h1>
+          <ul>
+            <li>
+              <a
+                target="_blank"
+                href="https://gist.github.com/sxzz/920d4480c8b507f6fb6606421cbf7028"
+                >2022，我的开源探索</a
+              >
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="https://gist.github.com/sxzz/3995fc7251567c7c95de35f45539b9c2"
+                >Vue 3.3 主要新特性详解</a
+              >
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="https://gist.github.com/sxzz/a20bb470a8fde0a04115a4d2df8e8313"
+                >HackerGame 2024 Writeup</a
+              >
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="https://gist.github.com/sxzz/a7c0d454b012bdca94e386a9520490be"
+                >踩坑异闻录——Windows 前端工具链之痛</a
+              >
+            </li>
+          </ul>
+        </body>
+      `
     }
 
     case 'ama.sxzz.moe':
