@@ -16,21 +16,18 @@ export default eventHandler((evt) => {
   switch (host) {
     case 'channel.sxzz.moe':
     case 'tg-group.sxzz.moe':
-      // redirect('https://t.me/sxzz_channel')
-      // redirect('https://t.me/+SfNJUvZ8YBszMGVl')
       return 'No longer public.'
 
     case 'chat.sxzz.moe':
       return redirect('https://discord.gg/r3knZmVCxf')
 
+    case 'sxzz.moe':
+    case 'www.sxzz.moe':
     case 'sxzz.dev':
     case 'www.sxzz.dev':
       return redirect('https://bsky.app/profile/sxzz.dev')
 
-    case 'sxzz.moe':
-    case 'www.sxzz.moe':
     case 'blog.sxzz.moe':
-      // redirect('https://xlog.sxzz.moe')
       return 'The website is down now.'
 
     case 'xlog.sxzz.moe': {
