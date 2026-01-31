@@ -1,11 +1,13 @@
 import { eventHandler, redirect } from 'nitro/h3'
 
-const posts: Set<string> = new Set([
-  '2022',
-  'vue-3-3',
-  'hackergame-2024-writeup',
-  'nodejs-windows-compatibility',
-])
+const xlogMappings: Record<string, string> = {
+  '2022': 'https://sxzz.dev/zh/posts/2022',
+  'vue-3-3': 'https://sxzz.dev/zh/posts/vue-3-3',
+  'hackergame-2024-writeup':
+    'https://sxzz.dev/zh/posts/hackergame-2024-writeup',
+  'nodejs-windows-compatibility':
+    'https://sxzz.dev/zh/musings/nodejs-windows-compatibility/',
+}
 
 // eslint-disable-next-line import/no-default-export
 export default eventHandler((evt) => {
@@ -26,9 +28,9 @@ export default eventHandler((evt) => {
 
     case 'blog.sxzz.moe':
     case 'xlog.sxzz.moe': {
-      const postName = pathname.slice(1)
-      if (posts.has(postName)) {
-        return redirect(`https://sxzz.dev/posts/${postName}`)
+      const path = pathname.slice(1)
+      if (xlogMappings[path]) {
+        return redirect(xlogMappings[path])
       }
       return redirect('https://sxzz.dev/posts/')
     }

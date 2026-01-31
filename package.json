@@ -2,6 +2,9 @@
   "type": "module",
   "private": true,
   "packageManager": "pnpm@10.28.1",
+  "engines": {
+    "node": ">=20.19.0"
+  },
   "scripts": {
     "build": "nitro build",
     "dev": "nitro dev",
