@@ -7,6 +7,7 @@ const xlogMappings: Record<string, string> = {
     'https://sxzz.dev/zh/posts/hackergame-2024-writeup',
   'nodejs-windows-compatibility':
     'https://sxzz.dev/zh/musings/nodejs-windows-compatibility/',
+  feed: 'https://sxzz.dev/zh/rss.xml',
 }
 
 // eslint-disable-next-line import/no-default-export
